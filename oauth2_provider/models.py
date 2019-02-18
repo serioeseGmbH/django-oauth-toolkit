@@ -264,7 +264,7 @@ class AbstractAccessToken(models.Model):
         oauth2_settings.REFRESH_TOKEN_MODEL, on_delete=models.SET_NULL, blank=True, null=True,
         related_name="refreshed_access_token"
     )
-    token = models.CharField(max_length=255, unique=True, )
+    token = models.CharField(max_length=99999, unique=True, )
     application = models.ForeignKey(
         oauth2_settings.APPLICATION_MODEL, on_delete=models.CASCADE, blank=True, null=True,
     )
